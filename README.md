@@ -1,12 +1,41 @@
-# LabOO Java
+# Labotório OO Java
 
-Olá! Este é o projeto de prática do LabOO Java da DIO. Algumas considerações deve ser informadas:
+Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma de orientação a objetos.
 
-* _Nenhum tratamento de erro foi feito_: forneça exatametne o que se pede. Não tente informar dados inexperados que a aplicação irá quebrar e encerrar.
-* _Desafios_: Existem alguns desafios quais você terá que responder. Para estes não existe código de resposta.
-* _Complementos_: Existem alguns postas no projeto que você poderá responder baseados nos videos e na resposta(arquivo LabOOJava_Resposta.zip)
+## 🛠️ Tecnologias
 
-Espero que este Lab(projeto e videos) te ajude a aprender mais sobre OO. Grande abraço.Dúvidas e questionamentos favor mandar mensagem via LinkedIn.
+- `Java`
+- `Git`
 
-Grande abraço e bons estudos.
+## 🎯 Desafios propostos
 
+    Package console - class Start
+  - Criar funcionalidade para...
+    - [ ] Consultar Caderno mediante matéria;
+    - [ ] Consultar Pedido pelo código;
+    - [ ] Cadastrar Caderno;
+    - [ ] Excluir Caderno;
+    - [ ] Listar todos os Pedidos;
+
+
+    Package entidade - class Pedido
+  - [ ] Preencher classe Pedido;
+
+
+    Package entidade - class Produto
+  - [ ] Criar método de cálculo de frete;
+
+
+    Package negocio - class PedidoNegocio
+  - [ ] Criar funcionalidade para listar todos os pedidos;
+
+
+    Package negocio - class ProdutoNegocio
+  - Criar funcionalidade para...
+    - [ ] Listar todos os pedidos;
+    - [x] Realizar comparação de produto utilizando equals;
+    - [x] Exlcluir produtos mediante código;
+
+
+    Package utilidade - class LeitoraDados
+  - [ ] Criar funcionalidade para ler o caderno;
