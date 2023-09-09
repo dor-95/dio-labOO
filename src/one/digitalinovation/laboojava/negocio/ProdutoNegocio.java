@@ -3,6 +3,7 @@ package one.digitalinovation.laboojava.negocio;
 import one.digitalinovation.laboojava.basedados.Banco;
 import one.digitalinovation.laboojava.entidade.Produto;
 
+import java.sql.SQLOutput;
 import java.util.Optional;
 
 /**
@@ -54,7 +55,14 @@ public class ProdutoNegocio {
      * @param codigo Código de cadastro do produto
      */
     public void excluir(String codigo) {
-        //TODO Implementar a exclusão
+        for (Produto produto: bancoDados.getProdutos()) {
+            if (produto.getCodigo().equals(codigo)) {
+                bancoDados.removerProduto(produto);
+                System.out.println("Produto excluído com sucesso.");
+                return;
+            }
+        }
+        System.out.println("Produto inexistente.");
     }
 
     /**
