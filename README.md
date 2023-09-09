@@ -24,6 +24,12 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
 
 ## 🎯 Desafios propostos
 
+> Package entidade - class Caderno
+- [x] Criado classe Caderno;
+
+> Package constantes - class Materias
+- [x] Criado classe Materias;
+
 > Package console - class Start
 >> Criar funcionalidade para...
   - [ ] Consultar Caderno mediante matéria;
