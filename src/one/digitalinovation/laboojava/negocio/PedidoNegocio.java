@@ -57,15 +57,15 @@ public class PedidoNegocio {
      */
     public void salvar(Pedido novoPedido, Cupom cupom) {
 
-        //Definir padrão código
-        //Pegar data do dia corrente
-        //Formatar código
+        String codigo = "PE%4d%2d%04d";
+        LocalDate hoje = LocalDate.now();
+        codigo = String.format(codigo, hoje.getYear(), hoje.getMonthValue(), bancoDados.getPedidos().length);
 
-        //Setar código no pedido
-        //Setar cliente no pedido
-        //Calcular e set total
-        //Adicionar no banco
-        //Mensagem
+        novoPedido.setCodigo(codigo);
+        novoPedido.setCliente(bancoDados.getCliente());
+        novoPedido.setTotal(calcularTotal(novoPedido.getProdutos(), cupom));
+        bancoDados.adicionarPedido(novoPedido);
+        System.out.println("Pedido salvo com sucesso.");
     }
 
     /**
@@ -95,6 +95,17 @@ public class PedidoNegocio {
     /**
      * Lista todos os pedidos realizados.
      */
-    //TODO Método de listar todos os pedidos
+    public void listarTodosPedidos() {
+
+        if (bancoDados.getPedidos().length == 0) {
+            System.out.println("Não existem pedidos cadastrados");
+            return;
+        }
+
+        for (Pedido pedido : bancoDados.getPedidos()) {
+            System.out.println(pedido);
+        }
+
+    }
 
 }
