@@ -1,7 +1,10 @@
 package one.digitalinovation.laboojava.console;
 
 import one.digitalinovation.laboojava.basedados.Banco;
-import one.digitalinovation.laboojava.entidade.*;
+import one.digitalinovation.laboojava.entidade.Cliente;
+import one.digitalinovation.laboojava.entidade.Cupom;
+import one.digitalinovation.laboojava.entidade.Livro;
+import one.digitalinovation.laboojava.entidade.Pedido;
 import one.digitalinovation.laboojava.negocio.ClienteNegocio;
 import one.digitalinovation.laboojava.negocio.PedidoNegocio;
 import one.digitalinovation.laboojava.negocio.ProdutoNegocio;
@@ -45,6 +48,7 @@ public class Start {
                 identificarUsuario(cpf);
             }
 
+            System.out.println("--------------------------------");
             System.out.println("Selecione uma opção:");
             System.out.println("1 - Cadastrar Livro");
             System.out.println("2 - Excluir Livro");
@@ -98,6 +102,7 @@ public class Start {
                     break;
                 case "8":
                     //TODO Listar todos os Pedidos
+                    pedidoNegocio.listarTodosPedidos();
                     break;
                 case "9":
                     System.out.println(String.format("Volte sempre %s!", clienteLogado.getNome()));
