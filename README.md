@@ -16,6 +16,9 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
 > Package entidade - class Pedido
 - [x] Preencher classe Pedido;
 
+> Package negocio - class PedidoNegocio
+- [x] Implementado método salvar pedido;
+
 ## 🎯 Desafios propostos
 
 > Package console - class Start
@@ -24,21 +27,20 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
   - [ ] Consultar Pedido pelo código;
   - [ ] Cadastrar Caderno;
   - [ ] Excluir Caderno;
-  - [ ] Listar todos os Pedidos;
+  - [x] Listar todos os Pedidos;
 
 > Package entidade - class Produto
   - [ ] Criar método de cálculo de frete;
 
 
 > Package negocio - class PedidoNegocio
-  - [ ] Criar funcionalidade para listar todos os pedidos;
+  - [x] Criar funcionalidade para listar todos os pedidos;
 
 
 > Package negocio - class ProdutoNegocio
 >> Criar funcionalidade para...
-  - [ ] Listar todos os pedidos;
   - [x] Realizar comparação de produto utilizando equals;
-  - [x] Exlcluir produtos mediante código;
+  - [x] Excluir produtos mediante código;
 
 
 > Package utilidade - class LeitoraDados
