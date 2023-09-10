@@ -1,10 +1,7 @@
 package one.digitalinovation.laboojava.console;
 
 import one.digitalinovation.laboojava.basedados.Banco;
-import one.digitalinovation.laboojava.entidade.Cliente;
-import one.digitalinovation.laboojava.entidade.Cupom;
-import one.digitalinovation.laboojava.entidade.Livro;
-import one.digitalinovation.laboojava.entidade.Pedido;
+import one.digitalinovation.laboojava.entidade.*;
 import one.digitalinovation.laboojava.negocio.ClienteNegocio;
 import one.digitalinovation.laboojava.negocio.PedidoNegocio;
 import one.digitalinovation.laboojava.negocio.ProdutoNegocio;
@@ -77,7 +74,8 @@ public class Start {
                     produtoNegocio.excluir(codigoLivro);
                     break;
                 case "3":
-                    //TODO Cadastrar Caderno
+                    Caderno caderno = LeitoraDados.lerCaderno();
+                    produtoNegocio.salvar(caderno);
                     break;
                 case "4":
                     //TODO Excluir Caderno
