@@ -45,10 +45,10 @@ public class Livro extends Produto {
     @Override
     public String toString() {
         return "Livro{" +
-                "nome='" + nome + '\'' +
-                ", genero=" + genero + '\'' +
-                ", codigo='" + getCodigo() + '\'' +
-                ", preço='" + getPreco() + '\'' +
+                "Código='" + getCodigo() + '\'' +
+                ", Nome='" + nome + '\'' +
+                ", Gênero=" + genero + '\'' +
+                ", Preço='" + getPreco() + '\'' +
                 '}';
     }
 }
