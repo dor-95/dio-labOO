@@ -11,7 +11,7 @@ public class Caderno extends Produto {
      */
     @Override
     public double calcularFrete() {
-        return 0;
+        return (getPreco() * getQuantidade()) + materias.getFator();
     }
 
     public Materias getMaterias() {
