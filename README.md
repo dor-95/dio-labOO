@@ -26,6 +26,7 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
 
 > Package entidade - class Caderno
 - [x] Criado classe Caderno;
+- [x] Sobrescrever método de cáculo de frete;
 
 > Package constantes - class Materias
 - [x] Criado classe Materias;
@@ -34,9 +35,10 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
 >> Criar funcionalidade para...
   - [ ] Consultar Caderno mediante matéria;
   - [ ] Consultar Pedido pelo código;
-  - [ ] Cadastrar Caderno;
-  - [ ] Excluir Caderno;
+  - [x] Cadastrar Caderno;
+  - [x] Excluir Caderno;
   - [x] Listar todos os Pedidos;
+  - [ ] Continuar a aplicação ao digitar um CPF inválido;
 
 > Package negocio - class PedidoNegocio
   - [x] Criar funcionalidade para listar todos os pedidos;
@@ -47,4 +49,4 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
   - [x] Excluir produtos mediante código;
 
 > Package utilidade - class LeitoraDados
-  - [ ] Criar funcionalidade para ler o caderno;
+  - [x] Criar funcionalidade para ler o caderno;
