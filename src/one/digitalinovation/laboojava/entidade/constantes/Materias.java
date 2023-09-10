@@ -8,10 +8,10 @@ public enum Materias {
     private double fator;
 
     /**
-     *
+     * Contructor
      * @param fator Valor por tipo que influencia no cálculo do frete.
      */
-    Materias(double fator) {this.fator = fator;}
+    Materias(double fator) {this.fator = fator / 10;}
 
     public double getFator() {return fator;}
 }
