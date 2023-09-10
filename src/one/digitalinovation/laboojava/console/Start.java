@@ -36,13 +36,7 @@ public class Start {
         while(true) {
 
             if (clienteLogado == null) {
-
-                System.out.println("Digite o cpf:");
-
-                String cpf = "";
-                cpf = LeitoraDados.lerDado();
-
-                identificarUsuario(cpf);
+                menuInicializador();
             }
 
             System.out.println("--------------------------------");
@@ -126,14 +120,43 @@ public class Start {
 
         Optional<Cliente> resultado = clienteNegocio.consultar(cpf);
 
-        if (resultado.isPresent()) {
-
-            Cliente cliente = resultado.get();
-            System.out.println(String.format("Olá %s! Você está logado.", cliente.getNome()));
-            clienteLogado = cliente;
-        } else {
+        if (resultado.isEmpty()) {
             System.out.println("Usuário não cadastrado.");
-            System.exit(0);
+            menuInicializador();
         }
+
+        Cliente cliente = resultado.get();
+        System.out.printf("Olá %s! Você está logado.%n", cliente.getNome());
+        clienteLogado = cliente;
+    }
+
+    private static void menuInicializador() {
+        System.out.println("--------------------------------");
+        System.out.println("Selecione uma opção:");
+        System.out.println("1 - Realizar login");
+        System.out.println("2 - Sair");
+
+        String opcao = LeitoraDados.lerDado();
+
+        switch (opcao) {
+            case "1" -> realizarLogin();
+            case "2" -> {
+                System.out.println("Aplicação encerrada.");
+                System.exit(0);
+            }
+            default -> {
+                System.out.println("Opção inválida.");
+                menuInicializador();
+            }
+        }
+    }
+
+    private static void realizarLogin() {
+        System.out.println("Digite o cpf:");
+
+        String cpf = "";
+        cpf = LeitoraDados.lerDado();
+
+        identificarUsuario(cpf);
     }
 }
