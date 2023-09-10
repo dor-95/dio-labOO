@@ -38,7 +38,7 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
   - [x] Cadastrar Caderno;
   - [x] Excluir Caderno;
   - [x] Listar todos os Pedidos;
-  - [ ] Continuar a aplicação ao digitar um CPF inválido;
+  - [x] Continuar a aplicação ao digitar um CPF inválido;
 
 > Package negocio - class PedidoNegocio
   - [x] Criar funcionalidade para listar todos os pedidos;
