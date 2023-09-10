@@ -57,7 +57,7 @@ public class PedidoNegocio {
      */
     public void salvar(Pedido novoPedido, Cupom cupom) {
 
-        String codigo = "PE%4d%2d%04d";
+        String codigo = "PE%4d%02d%04d";
         LocalDate hoje = LocalDate.now();
         codigo = String.format(codigo, hoje.getYear(), hoje.getMonthValue(), bancoDados.getPedidos().length);
 
@@ -65,7 +65,7 @@ public class PedidoNegocio {
         novoPedido.setCliente(bancoDados.getCliente());
         novoPedido.setTotal(calcularTotal(novoPedido.getProdutos(), cupom));
         bancoDados.adicionarPedido(novoPedido);
-        System.out.println("Pedido salvo com sucesso.");
+        System.out.println("Pedido cadastrado com sucesso.");
     }
 
     /**
@@ -103,7 +103,7 @@ public class PedidoNegocio {
         }
 
         for (Pedido pedido : bancoDados.getPedidos()) {
-            System.out.println(pedido);
+            System.out.println(pedido.toString());
         }
 
     }
