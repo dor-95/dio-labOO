@@ -1,6 +1,7 @@
 package one.digitalinovation.laboojava.negocio;
 
 import one.digitalinovation.laboojava.basedados.Banco;
+import one.digitalinovation.laboojava.entidade.Cliente;
 import one.digitalinovation.laboojava.entidade.Cupom;
 import one.digitalinovation.laboojava.entidade.Pedido;
 import one.digitalinovation.laboojava.entidade.Produto;
@@ -46,8 +47,8 @@ public class PedidoNegocio {
      * Salva um novo pedido sem cupom de desconto.
      * @param novoPedido Pedido a ser armazenado
      */
-    public void salvar(Pedido novoPedido) {
-        salvar(novoPedido, null);
+    public void salvar(Pedido novoPedido, Cliente cliente) {
+        salvar(novoPedido, null, cliente);
     }
 
     /**
@@ -55,14 +56,14 @@ public class PedidoNegocio {
      * @param novoPedido Pedido a ser armazenado
      * @param cupom Cupom de desconto a ser utilizado
      */
-    public void salvar(Pedido novoPedido, Cupom cupom) {
+    public void salvar(Pedido novoPedido, Cupom cupom, Cliente cliente) {
 
         String codigo = "PE%4d%02d%04d";
         LocalDate hoje = LocalDate.now();
         codigo = String.format(codigo, hoje.getYear(), hoje.getMonthValue(), bancoDados.getPedidos().length);
 
         novoPedido.setCodigo(codigo);
-        novoPedido.setCliente(bancoDados.getCliente());
+        novoPedido.setCliente(cliente);
         novoPedido.setTotal(calcularTotal(novoPedido.getProdutos(), cupom));
         bancoDados.adicionarPedido(novoPedido);
         System.out.println("Pedido cadastrado com sucesso.");
@@ -95,7 +96,7 @@ public class PedidoNegocio {
     /**
      * Lista todos os pedidos realizados.
      */
-    public void listarTodosPedidos() {
+    public void listarTodos() {
 
         if (bancoDados.getPedidos().length == 0) {
             System.out.println("Não existem pedidos cadastrados");
