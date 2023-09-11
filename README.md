@@ -33,11 +33,14 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
 
 > Package console - class Start
 >> Criar funcionalidade para...
+  - [x] Possibilitar mais de um cliente;
+  - [ ] Consultar Livro pelo nome;
   - [ ] Consultar Caderno mediante matéria;
   - [ ] Consultar Pedido pelo código;
   - [x] Cadastrar Caderno;
   - [x] Excluir Caderno;
   - [x] Listar todos os Pedidos;
+  - [x] Listar todos os Clientes;
   - [x] Continuar a aplicação ao digitar um CPF inválido;
 
 > Package negocio - class PedidoNegocio
@@ -47,6 +50,11 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
 >> Criar funcionalidade para...
   - [x] Realizar comparação de produto utilizando equals;
   - [x] Excluir produtos mediante código;
+
+> Package negocio - class ClienteNegocio
+>> Criar funcionalidade para...
+- [x] Salvar cliente;
+- [x] Excluir cliente;
 
 > Package utilidade - class LeitoraDados
   - [x] Criar funcionalidade para ler o caderno;
