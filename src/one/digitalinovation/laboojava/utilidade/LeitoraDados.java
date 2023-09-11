@@ -19,7 +19,7 @@ public final class LeitoraDados {
 	 * Classe do Java para manipular entradas via teclado.
 	 */
 	private static Scanner scanner;
-	
+
 	static {
 		scanner = new Scanner(System.in);
 	}
@@ -29,9 +29,9 @@ public final class LeitoraDados {
 	 * @return Dado lido
 	 */
 	public static String lerDado() {
-		
+
 		String texto = scanner.nextLine();
-		
+
 		return texto;
 	}
 
@@ -133,5 +133,20 @@ public final class LeitoraDados {
 		}
 
 		return Optional.empty();
+	}
+
+    public static Cliente lerCliente() {
+		System.out.println("Cadastrando cliente...");
+		Cliente cliente = new Cliente();
+
+		System.out.println("Digite o nome:");
+		String nome = lerDado();
+		cliente.setNome(nome);
+
+		System.out.println("Digite o número do CPF:");
+		String cpf = lerDado();
+		cliente.setCpf(cpf);
+
+		return cliente;
 	}
 }

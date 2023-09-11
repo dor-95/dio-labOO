@@ -16,11 +16,6 @@ public class Cliente {
      */
     private String cpf;
 
-    public Cliente() {
-        this.nome = "Fulano";
-        this.cpf = "123456789011";
-    }
-
     public String getNome() {
         return nome;
     }
@@ -39,6 +34,9 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{ nome='" + nome + "'}";
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                '}';
     }
 }
