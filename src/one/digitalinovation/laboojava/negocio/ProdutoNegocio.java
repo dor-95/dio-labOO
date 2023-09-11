@@ -3,7 +3,6 @@ package one.digitalinovation.laboojava.negocio;
 import one.digitalinovation.laboojava.basedados.Banco;
 import one.digitalinovation.laboojava.entidade.Produto;
 
-import java.sql.SQLOutput;
 import java.util.Optional;
 
 /**
