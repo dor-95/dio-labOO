@@ -95,7 +95,7 @@ public class Start {
                     produtoNegocio.listarTodos();
                     break;
                 case "8":
-                    pedidoNegocio.listarTodosPedidos();
+                    pedidoNegocio.listarTodos();
                     break;
                 case "9":
                     System.out.println(String.format("Volte sempre %s!", clienteLogado.getNome()));
@@ -120,27 +120,46 @@ public class Start {
 
         Optional<Cliente> resultado = clienteNegocio.consultar(cpf);
 
-        if (resultado.isEmpty()) {
-            System.out.println("Usuário não cadastrado.");
-            menuInicializador();
+        if (resultado.isPresent()) {
+            Cliente cliente = resultado.get();
+            System.out.printf("Olá %s! Você está logado.%n", cliente.getNome());
+            clienteLogado = cliente;
+            return;
         }
 
-        Cliente cliente = resultado.get();
-        System.out.printf("Olá %s! Você está logado.%n", cliente.getNome());
-        clienteLogado = cliente;
+        System.out.println("Usuário não cadastrado.");
+        menuInicializador();
     }
 
     private static void menuInicializador() {
         System.out.println("--------------------------------");
         System.out.println("Selecione uma opção:");
         System.out.println("1 - Realizar login");
-        System.out.println("2 - Sair");
+        System.out.println("2 - Cadastrar-se");
+        System.out.println("3 - Excluir conta");
+        System.out.println("4 - Listar usuários");
+        System.out.println("5 - Sair");
 
         String opcao = LeitoraDados.lerDado();
 
         switch (opcao) {
             case "1" -> realizarLogin();
             case "2" -> {
+                Cliente cliente = LeitoraDados.lerCliente();
+                clienteNegocio.salvar(cliente);
+                menuInicializador();
+            }
+            case "3" -> {
+                System.out.println("Digite o CPF da conta:");
+                String cpf = LeitoraDados.lerDado();
+                clienteNegocio.excluir(cpf);
+                menuInicializador();
+            }
+            case "4" -> {
+                clienteNegocio.listarTodos();
+                menuInicializador();
+            }
+            case "5" -> {
                 System.out.println("Aplicação encerrada.");
                 System.exit(0);
             }
