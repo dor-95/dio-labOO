@@ -67,7 +67,7 @@ public class Pedido {
     public String toString() {
         return "Pedido{" +
                 "codigo='" + codigo + '\'' +
-                ", cliente=" + cliente +
+                ", cliente=" + cliente.getNome() +
                 ", produtos=" + getProdutosComprados() +
                 ", total=" + total +
                 '}';
