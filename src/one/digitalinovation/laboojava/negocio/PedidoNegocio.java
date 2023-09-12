@@ -109,4 +109,15 @@ public class PedidoNegocio {
 
     }
 
+    public void consultar(String codigo) {
+        for (Pedido pedido : bancoDados.getPedidos()) {
+            if (pedido.getCodigo().equals(codigo)) {
+                System.out.println(pedido);
+                return;
+            }
+        }
+
+        System.out.println("Pedido não encontrado.");
+    }
+
 }

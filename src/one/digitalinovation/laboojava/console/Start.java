@@ -43,11 +43,9 @@ public class Start {
             System.out.println("Selecione uma opção:");
             System.out.println("1 - Cadastrar Livro");
             System.out.println("2 - Excluir Livro");
-            //TODO Desafio: Consultar Livro(nome)
             System.out.println("3 - Consultar Livro");
             System.out.println("4 - Cadastrar Caderno");
             System.out.println("5 - Excluir Caderno");
-            //TODO Desafio: Consultar Caderno(matéria)
             System.out.println("6 - Consultar Caderno");
             System.out.println("7 - Fazer pedido");
             System.out.println("8 - Excluir pedido");
@@ -85,7 +83,6 @@ public class Start {
                     produtoNegocio.excluir(codigoCaderno);
                     break;
                 case "6":
-                    //TODO Desafio: Consultar Caderno(matéria)
                     System.out.println("Digite a quantidade de matérias");
                     String materiaCaderno = LeitoraDados.lerDado();
                     cadernoNegocio.consultar(materiaCaderno);
@@ -107,6 +104,9 @@ public class Start {
                     break;
                 case "9":
                     //TODO Desafio: Consultar Pedido(código)
+                    System.out.println("Digite o código do pedido");
+                    String codigo = LeitoraDados.lerDado();
+                    pedidoNegocio.consultar(codigo);
                     break;
                 case "10":
                     produtoNegocio.listarTodos();
