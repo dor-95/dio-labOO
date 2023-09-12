@@ -1,32 +1,32 @@
 package one.digitalinovation.laboojava.entidade;
 
-import one.digitalinovation.laboojava.entidade.constantes.Materias;
+import one.digitalinovation.laboojava.entidade.constantes.Materia;
 
 public class Caderno extends Produto {
 
-    private Materias materias;
+    private Materia materia;
 
     /**
      * {@inheritDoc}.
      */
     @Override
     public double calcularFrete() {
-        return (getPreco() * getQuantidade()) + materias.getFator();
+        return (getPreco() * getQuantidade()) + materia.getFator();
     }
 
-    public Materias getMaterias() {
-        return materias;
+    public Materia getMateria() {
+        return materia;
     }
 
-    public void setMaterias(Materias materias) {
-        this.materias = materias;
+    public void setMateria(Materia materia) {
+        this.materia = materia;
     }
 
     @Override
     public String toString() {
         return "Caderno{" +
                 "Código='" + getCodigo() + '\'' +
-                ", Tipo=" + materias +
+                ", Tipo=" + materia +
                 ", Preço='" + getPreco() + '\'' +
                 '}';
     }
