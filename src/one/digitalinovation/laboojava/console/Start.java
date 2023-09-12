@@ -2,10 +2,7 @@ package one.digitalinovation.laboojava.console;
 
 import one.digitalinovation.laboojava.basedados.Banco;
 import one.digitalinovation.laboojava.entidade.*;
-import one.digitalinovation.laboojava.negocio.ClienteNegocio;
-import one.digitalinovation.laboojava.negocio.LivroNegocio;
-import one.digitalinovation.laboojava.negocio.PedidoNegocio;
-import one.digitalinovation.laboojava.negocio.ProdutoNegocio;
+import one.digitalinovation.laboojava.negocio.*;
 import one.digitalinovation.laboojava.utilidade.LeitoraDados;
 
 import java.util.Optional;
@@ -24,6 +21,7 @@ public class Start {
     private static PedidoNegocio pedidoNegocio = new PedidoNegocio(banco);
     private static ProdutoNegocio produtoNegocio = new ProdutoNegocio(banco);
     private static LivroNegocio livroNegocio = new LivroNegocio(banco);
+    private static CadernoNegocio cadernoNegocio = new CadernoNegocio(banco);
 
     /**
      * Método utilitário para inicializar a aplicação.
@@ -75,8 +73,7 @@ public class Start {
                 case "3":
                     System.out.println("Digite o nome do livro");
                     String nomeLivro = LeitoraDados.lerDado();
-                    Optional<Livro> resultado = livroNegocio.consultar(nomeLivro);
-                    resultado.ifPresent(System.out::println);
+                    livroNegocio.consultar(nomeLivro).ifPresent(System.out::println);
                     break;
                 case "4":
                     Caderno caderno = LeitoraDados.lerCaderno();
@@ -89,6 +86,9 @@ public class Start {
                     break;
                 case "6":
                     //TODO Desafio: Consultar Caderno(matéria)
+                    System.out.println("Digite a quantidade de matérias");
+                    String materiaCaderno = LeitoraDados.lerDado();
+                    cadernoNegocio.consultar(materiaCaderno);
                     break;
                 case "7":
                     Pedido pedido = LeitoraDados.lerPedido(banco);
