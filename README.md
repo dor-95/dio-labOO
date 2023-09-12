@@ -34,8 +34,8 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
 > Package console - class Start
 >> Criar funcionalidade para...
   - [x] Possibilitar mais de um cliente;
-  - [ ] Consultar Livro pelo nome;
-  - [ ] Consultar Caderno mediante matéria;
+  - [x] Consultar Livro pelo nome;
+  - [x] Consultar Caderno mediante matéria;
   - [ ] Consultar Pedido pelo código;
   - [x] Cadastrar Caderno;
   - [x] Excluir Caderno;
