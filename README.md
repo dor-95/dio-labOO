@@ -36,7 +36,7 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
   - [x] Possibilitar mais de um cliente;
   - [x] Consultar Livro pelo nome;
   - [x] Consultar Caderno mediante matéria;
-  - [ ] Consultar Pedido pelo código;
+  - [x] Consultar Pedido pelo código;
   - [x] Cadastrar Caderno;
   - [x] Excluir Caderno;
   - [x] Listar todos os Pedidos;
@@ -53,8 +53,8 @@ Projeto de prática do LabOO Java da DIO. Tem como objetivo praticar o paradigma
 
 > Package negocio - class ClienteNegocio
 >> Criar funcionalidade para...
-- [x] Salvar cliente;
-- [x] Excluir cliente;
+ - [x] Salvar cliente;
+ - [x] Excluir cliente;
 
 > Package utilidade - class LeitoraDados
   - [x] Criar funcionalidade para ler o caderno;
